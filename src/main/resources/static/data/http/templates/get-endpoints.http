@@ -1,0 +1,74 @@
+### Variables
+@baseUrl = http://localhost:9000
+@contextPath = /sideralti/api/v1
+@apiPath = /rest/proyectos
+
+### Consulta_GET `findByEstado` -->  Busca proyectos por su estado (PLANIFICACION, EJECUCION, FINALIZADO)
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/estado/EJECUCION
+
+### Consulta_GET `findByPrioridad`  -->  Busca proyectos por su nivel de prioridad (BAJA, MEDIA, ALTA, URGENTE)
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/prioridad/ALTA
+
+### Consulta_GET `findByResponsable`  -->  Busca proyectos por el nombre del responsable
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/responsable/nombre?responsable=Juan%20Pérez
+
+### Consulta_GET `findByPresupuestoGreaterThan`  -->  Busca proyectos con presupuesto mayor a un valor dado
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/presupuesto/mayor-que/100000
+
+### Consulta_GET `findByFechaInicioBetween`: Busca proyectos con fecha de inicio en un rango determinado
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/fecha-inicio?start=2024-01-01&end=2024-06-30
+
+### Consulta_GET `findByNombreContaining`  -->  Busca proyectos cuyo nombre contenga una cadena parcial
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/nombre?nombreParcial=Sistema
+
+###
+###
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/responsable?nombreResponsable=Juan
+
+
+### Consulta_GET Buscar Proyectos por Rango de Presupuesto -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/presupuesto-rango?presupuestoMinimo=50000&presupuestoMaximo=200000
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/nombre-prefijo?prefijo=Sistema
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/fecha-inicio-antes?fecha=2024-06-30
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/prioridad-presupuesto?prioridad=ALTA
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/estado-prioridad?estado=EJECUCION&prioridad=ALTA
+
+
+
+### GET RECORDS
+###
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/estado-parcial?estado=FINALIZADO
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/prioridad-parcial?prioridad=ALTA
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/fechas-parcial?startDate=2023-01-01&endDate=2024-12-31
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/responsable-parcial?responsable=Juan
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/presupuesto-parcial?presupuesto=50000
+
+
+### Consulta_GET  -->
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/nombre-parcial?keyword=Sistema

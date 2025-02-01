@@ -1,0 +1,58 @@
+### Variables
+@baseUrl = http://localhost:9000
+@contextPath = /sideralti/api/v1
+@apiPath = /rest/proyectos
+
+### Path completa: http://localhost:9000/sideralti/api/v1/rest/proyectos
+
+### Obtener todos los registros  --> Find All Method (findAll())
+GET {{baseUrl}}{{contextPath}}{{apiPath}}
+
+### Obtener registro por Id  --> Find By Id Method (findById())
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/3
+
+### Obtener el total de registros de la Tabla --> Count Method (count())
+GET {{baseUrl}}{{contextPath}}{{apiPath}}/count
+
+### Eliminar un registro por Id  --> Delete By Id Method (deleteById())
+DELETE {{baseUrl}}{{contextPath}}{{apiPath}}/2
+
+### Eliminar todos los registros --> Delete All Method (deleteAll())
+DELETE {{baseUrl}}{{contextPath}}{{apiPath}}/delete-all
+
+### Guardar un nuevo registro  --> Save Method (save())
+POST {{baseUrl}}{{contextPath}}{{apiPath}}
+Content-Type: application/json
+
+{
+  "nombre": "Sistema de Gestión Empresarial",
+  "descripcion": "Desarrollo de plataforma integral para administración de recursos",
+  "fechaInicio": "2024-01-15",
+  "fechaFin": "2024-12-31",
+  "presupuesto": 150000.00,
+  "estado": "PLANIFICACION",
+  "prioridad": "ALTA",
+  "responsable": "Juan Pérez"
+}
+
+### Actualizar un registro  --> Update Method (update())
+PUT {{baseUrl}}{{contextPath}}{{apiPath}}/3
+Content-Type: application/json
+
+{
+  "nombre": "Sistema de Gestión Empresarial Sideral TI",
+  "descripcion": "Desarrollo de plataforma integral para administración de recursos",
+  "fechaInicio": "2024-01-15",
+  "fechaFin": "2024-12-31",
+  "presupuesto": 150000.00,
+  "estado": "PLANIFICACION",
+  "prioridad": "ALTA",
+  "responsable": "Juan Pérez"
+}
+
+### Guardar varios registros  --> Save All Method (saveAll())
+POST {{baseUrl}}{{contextPath}}{{apiPath}}/bulk
+Content-Type: application/json
+
+
+

@@ -1,0 +1,131 @@
+### Variables
+@baseUrl = http://localhost:9000
+@contextPath = /sideralti/api/v1
+@apiPath = /rest/proyectos
+
+### Guardar varios registros  --> Save All Method (saveAll())
+POST {{baseUrl}}{{contextPath}}{{apiPath}}/batch
+Content-Type: application/json
+
+[
+  {
+    "nombre": "Sistema de Gestión Empresarial",
+    "descripcion": "Desarrollo de plataforma integral para administración de recursos",
+    "fechaInicio": "2024-01-15",
+    "fechaFin": "2024-12-31",
+    "presupuesto": 150000.00,
+    "estado": "PLANIFICACION",
+    "prioridad": "ALTA",
+    "responsable": "Juan Pérez"
+  },
+  {
+    "nombre": "Aplicación Móvil de E-commerce",
+    "descripcion": "Desarrollo de app para ventas online con múltiples funcionalidades",
+    "fechaInicio": "2024-02-01",
+    "fechaFin": "2024-10-30",
+    "presupuesto": 85000.50,
+    "estado": "EJECUCION",
+    "prioridad": "URGENTE",
+    "responsable": "María Rodríguez"
+  },
+  {
+    "nombre": "Infraestructura Cloud",
+    "descripcion": "Migración de servicios a infraestructura en la nube",
+    "fechaInicio": "2024-03-10",
+    "fechaFin": "2024-09-15",
+    "presupuesto": 120000.75,
+    "estado": "PLANIFICACION",
+    "prioridad": "MEDIA",
+    "responsable": "Carlos Sánchez"
+  },
+  {
+    "nombre": "Sistema de Recursos Humanos",
+    "descripcion": "Implementación de sistema para gestión de personal",
+    "fechaInicio": "2024-01-20",
+    "fechaFin": "2024-11-30",
+    "presupuesto": 95000.25,
+    "estado": "EJECUCION",
+    "prioridad": "ALTA",
+    "responsable": "Laura Martínez"
+  },
+  {
+    "nombre": "Plataforma de Análisis de Datos",
+    "descripcion": "Desarrollo de herramienta para análisis de big data",
+    "fechaInicio": "2024-02-15",
+    "fechaFin": "2024-12-15",
+    "presupuesto": 200000.00,
+    "estado": "PLANIFICACION",
+    "prioridad": "URGENTE",
+    "responsable": "Roberto García"
+  },
+  {
+    "nombre": "Sistema de Seguridad Industrial",
+    "descripcion": "Implementación de sistema de monitoreo y control",
+    "fechaInicio": "2024-04-01",
+    "fechaFin": "2024-10-01",
+    "presupuesto": 75000.50,
+    "estado": "EJECUCION",
+    "prioridad": "BAJA",
+    "responsable": "Ana López"
+  },
+  {
+    "nombre": "Portal Web Corporativo",
+    "descripcion": "Rediseño y desarrollo de sitio web institucional",
+    "fechaInicio": "2024-01-05",
+    "fechaFin": "2024-07-30",
+    "presupuesto": 45000.00,
+    "estado": "FINALIZADO",
+    "prioridad": "MEDIA",
+    "responsable": "David Torres"
+  },
+  {
+    "nombre": "CRM Personalizado",
+    "descripcion": "Sistema de gestión de relación con clientes",
+    "fechaInicio": "2024-03-20",
+    "fechaFin": "2024-11-15",
+    "presupuesto": 110000.75,
+    "estado": "PLANIFICACION",
+    "prioridad": "ALTA",
+    "responsable": "Sofía Ramírez"
+  },
+  {
+    "nombre": "Sistema de Inventario",
+    "descripcion": "Desarrollo de aplicación para control de stock",
+    "fechaInicio": "2024-02-10",
+    "fechaFin": "2024-08-31",
+    "presupuesto": 65000.25,
+    "estado": "EJECUCION",
+    "prioridad": "MEDIA",
+    "responsable": "Pablo Fernández"
+  },
+  {
+    "nombre": "Desarrollo de API Rest",
+    "descripcion": "Construcción de microservicios para integración",
+    "fechaInicio": "2024-04-15",
+    "fechaFin": "2024-10-15",
+    "presupuesto": 90000.00,
+    "estado": "PLANIFICACION",
+    "prioridad": "URGENTE",
+    "responsable": "Lucía Morales"
+  },
+  {
+    "nombre": "Sistema de Facturación Electrónica",
+    "descripcion": "Implementación de sistema de facturación digital",
+    "fechaInicio": "2024-01-10",
+    "fechaFin": "2024-09-30",
+    "presupuesto": 80000.50,
+    "estado": "EJECUCION",
+    "prioridad": "ALTA",
+    "responsable": "Miguel Álvarez"
+  },
+  {
+    "nombre": "Aplicación de Gestión Académica",
+    "descripcion": "Sistema integral para instituciones educativas",
+    "fechaInicio": "2024-03-01",
+    "fechaFin": "2024-12-20",
+    "presupuesto": 130000.75,
+    "estado": "PLANIFICACION",
+    "prioridad": "MEDIA",
+    "responsable": "Elena Gutiérrez"
+  }
+]

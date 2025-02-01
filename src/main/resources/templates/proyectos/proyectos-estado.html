@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos por Estado</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/styles-estado.css}">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Proyectos en Estado: <span class="badge bg-primary" th:text="${estado}"></span></h1>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Prioridad</th>
+                <th>Responsable</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="proyecto : ${proyectos}">
+                <td th:text="${proyecto.id}"></td>
+                <td th:text="${proyecto.nombre}"></td>
+                <td>
+                    <span class="badge bg-success" th:if="${proyecto.estado == 'EJECUCION'}" th:text="${proyecto.estado}"></span>
+                    <span class="badge bg-warning text-dark" th:if="${proyecto.estado == 'PLANIFICACION'}" th:text="${proyecto.estado}"></span>
+                    <span class="badge bg-secondary" th:if="${proyecto.estado == 'FINALIZADO'}" th:text="${proyecto.estado}"></span>
+                </td>
+                <td>
+                    <span class="badge bg-danger" th:if="${proyecto.prioridad == 'URGENTE'}" th:text="${proyecto.prioridad}"></span>
+                    <span class="badge bg-warning text-dark" th:if="${proyecto.prioridad == 'ALTA'}" th:text="${proyecto.prioridad}"></span>
+                    <span class="badge bg-info text-dark" th:if="${proyecto.prioridad == 'MEDIA'}" th:text="${proyecto.prioridad}"></span>
+                    <span class="badge bg-light text-dark" th:if="${proyecto.prioridad == 'BAJA'}" th:text="${proyecto.prioridad}"></span>
+                </td>
+                <td th:text="${proyecto.responsable}"></td>
+                <td>
+                    <button class="btn btn-info btn-sm" onclick="viewDetails(this)" data-id="" th:data-id="${proyecto.id}">Ver</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/code.js}"></script>
+</body>
+</html>
